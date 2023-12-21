@@ -1,0 +1,11 @@
+int getSum(int x) {
+    int sum = 0;
+    for (int i = 0; i < x; i++) {
+        sum += i * 10;
+    }
+    return sum;
+}
+
+void main(string args[]) {
+    int result = getSum(10);
+}
