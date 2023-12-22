@@ -16,11 +16,9 @@ public class LexicalAnalyzer {
         }
         return false;
     }
-
     public static void readFileAndPrintResult() {
-        char[] operators = {'+', '-', '*', '/', '%', '='};
-        char[] separators = {'(', ')', '{', '}', '[', ']', '<', '>', ','};
-        int BUFFER_SIZE = 15;
+        char[] operators = {'+', '-', '*', '/', '%', '<', '>', '='};
+        char[] separators = {'(', ')', '{', '}', '[', ']', ',', ';'};
 
         try {
             File file = new File("lexicalinput.txt");
@@ -30,14 +28,14 @@ public class LexicalAnalyzer {
                 String token = scanner.next();
 
                 for (char operator : operators) {
-                    if (token.length() == 1 && token.charAt(0) == operator) {
+                    if (token.charAt(0) == operator) {
                         System.out.println("OPERATOR:     " + token);
                         break;
                     }
                 }
 
                 for (char separator : separators) {
-                    if (token.length() == 1 && token.charAt(0) == separator) {
+                    if (token.charAt(0) == separator) {
                         System.out.println("SEPARATOR:    " + token);
                         break;
                     }
@@ -57,3 +55,5 @@ public class LexicalAnalyzer {
         }
     }
 }
+
+// Notes :  Numeric
