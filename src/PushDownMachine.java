@@ -12,10 +12,7 @@ public class PushDownMachine {
         return i == s.length;
     }
 
-//    S -> aBb|ccA
-//    A -> b|c
-//    B -> a|b
-
+ 
     private void S() {
          if (i < s.length && s[i] == 'a') {
             i++;
