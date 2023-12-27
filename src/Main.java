@@ -14,12 +14,12 @@ public class Main {
             switch (choice) {
                 case 1 : {
                     PDMachine();
-                    System.out.println("--------------------------------------");
+                    System.out.println("-------------****--------------");
                     break;
                 }
                 case 2 : {
                     LexicalAnalyzer();
-                    System.out.println("--------------------------------------");
+                    System.out.println("-------------****--------------");
                     break;
                 }
                 default : loop = false;
