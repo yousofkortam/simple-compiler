@@ -17,14 +17,17 @@ public class PushDownMachine {
 //    B -> a|b
 
     private void S() {
-        if (i < s.length && s[i] == 'a') {
+         if (i < s.length && s[i] == 'a') {
             i++;
-            B();
-            if (i < s.length && s[i] == 'b')
+            A();
+            if (i < s.length && s[i] == 'b'){
                 i++;
+            B();
+            }
             else
                 error();
-        } else if (i < s.length && s[i] == 'c') {
+        }
+         else if (i < s.length && s[i] == 'c') {
             i++;
             if (i < s.length && s[i] == 'c') {
                 i++;
@@ -34,15 +37,15 @@ public class PushDownMachine {
         }
     }
 
-    private void A() {
-        if (i < s.length && (s[i] == 'b' || s[i] == 'c'))
+    private void A()  {
+        if (i < s.length && (  s[i] == 'a'|s[i] == 'c'))
             i++;
         else
             error();
     }
 
     private void B() {
-        if (i < s.length && (s[i] == 'a' || s[i] == 'b'))
+        if (i < s.length && (s[i] == 'b' || s[i] == 'a'))
             i++;
         else
             error();
