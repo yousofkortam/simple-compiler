@@ -38,7 +38,7 @@ public class PushDownMachine {
     }
 
     private void A()  {
-        if (i < s.length && (  s[i] == 'a'|s[i] == 'c'))
+        if (i < s.length && (  s[i] == 'a'|| s[i] == 'c'))
             i++;
         else
             error();
