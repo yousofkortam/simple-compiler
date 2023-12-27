@@ -29,9 +29,9 @@ public class Main {
 
     public static void PDMachine() {
         System.out.println("Given grammar is ");
-        System.out.println("S -> aBb|ccA");
-        System.out.println("A -> b|c");
-        System.out.println("B -> a|b");
+        System.out.println("S -> aAbB|ccB");
+        System.out.println("A -> a|c");
+        System.out.println("B -> b|a");
         System.out.println("Enter the string");
         String input = scanner.next();
 
