@@ -16,6 +16,16 @@ public class LexicalAnalyzer {
         }
         return false;
     }
+
+    public static boolean isNumeric(String str) {
+        try {
+            Double.parseDouble(str);
+            return true;
+        } catch (NumberFormatException e) {
+            return false;
+        }
+    }
+
     public static void readFileAndPrintResult() {
         char[] operators = {'+', '-', '*', '/', '%', '<', '>', '='};
         char[] separators = {'(', ')', '{', '}', '[', ']', ',', ';'};
@@ -41,11 +51,17 @@ public class LexicalAnalyzer {
                     }
                 }
 
-                if (Character.isLetterOrDigit(token.charAt(0))) {
+                if (Character.isLetter(token.charAt(0))) {
                     if (isKeyword(token)) {
                         System.out.println("KEYWORD:      " + token);
                     } else {
                         System.out.println("IDENTIFIER:   " + token);
+                    }
+                } else if (Character.isDigit(token.charAt(0)) || (token.charAt(0) == '-' && token.length() > 1 && Character.isDigit(token.charAt(1)))) {
+                    if (isNumeric(token)) {
+                        System.out.println("NUMERIC:      " + token);
+                    } else {
+                        System.out.println("INVALID:      " + token);
                     }
                 }
             }
@@ -55,5 +71,3 @@ public class LexicalAnalyzer {
         }
     }
 }
-
-// Notes :  Numeric
