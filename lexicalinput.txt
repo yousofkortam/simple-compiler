@@ -7,5 +7,5 @@ int getSum ( int x ) {
 }
 
 void main ( string args [ ] ) {
-    int result = getSum ( 10 );
+    int result = getSum ( 10 ) ;
 }

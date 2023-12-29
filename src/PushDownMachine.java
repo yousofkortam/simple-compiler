@@ -17,9 +17,9 @@ public class PushDownMachine {
          if (i < s.length && s[i] == 'a') {
             i++;
             A();
-            if (i < s.length && s[i] == 'b'){
+            if (i < s.length && s[i] == 'b') {
                 i++;
-            B();
+                B();
             }
             else
                 error();
