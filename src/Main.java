@@ -38,6 +38,7 @@ public class Main {
         PushDownMachine machine = new PushDownMachine(input);
         if (machine.isValid())
             System.out.println("String is valid");
+        else System.out.println("String is Invalid!!");
     }
 
     public static void LexicalAnalyzer() {
